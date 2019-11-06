@@ -1,0 +1,22 @@
+{
+  "name": "babel-plugin-wrapper-debug-method",
+  "version": "0.0.1",
+  "description": "Wrapper function debugger message",
+  "repository": "https://github.com/babel/babel/tree/master/packages/babel-plugin-transform-es2015-template-literals",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel test -d dest"
+  },
+  "keywords": [
+    "babel-plugin"
+  ],
+  "dependencies": {
+    "babel-types": "^6.26.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.0",
+    "babel-core": "^6.26.3"
+  }
+}
