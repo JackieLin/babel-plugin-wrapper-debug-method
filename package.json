@@ -6,7 +6,8 @@
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
-    "build": "babel test -d dest"
+    "build": "node ./node_modules/@babel/cli/bin/babel.js test -d dest",
+    "debug": "node  --inspect-brk=9229 ./node_modules/@babel/cli/bin/babel.js test -d dest"
   },
   "keywords": [
     "babel-plugin"
@@ -17,6 +18,8 @@
   "devDependencies": {
     "@babel/cli": "^7.7.0",
     "@babel/core": "^7.7.0",
-    "babel-core": "^6.26.3"
+    "babel-core": "^6.26.3",
+    "babel-traverse": "^6.26.0",
+    "babylon": "^6.18.0"
   }
 }
