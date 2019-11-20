@@ -3,5 +3,9 @@
 // });
 
 root.pendingInteractionMap.forEach(function aa(scheduledInteractions, scheduledExpirationTime) {
-    console.log(22) 
- });
+    if (scheduledExpirationTime <= expirationTime) {
+        scheduledInteractions.forEach(interaction =>
+            interactions.add(interaction),
+        );
+    }
+});
