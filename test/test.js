@@ -1,17 +1,20 @@
 // 先写测试用例，然后写 demo
 // 普通函数
-var aa = function() { }
-function aa() { }
+// var aa = function() { }
+// function aa4() { }
+
+var cc;
+cc = function() {};
 
 () => { console.log(222)}
 
-var aa = {
+var aa1 = {
     bb: function() {},
     cc: function name() { console.log(222) }
 };
 
-aa.prototype.bb = function () { console.log(222)};
-aa.prototype.bb = function name () { console.log(222)};
+aa.prototype.bb1 = function () { console.log(222)};
+aa.prototype.bb2 = function name () { console.log(222)};
 
 [].forEach(function() {})
 
@@ -23,7 +26,7 @@ try {
 
 }
 
-function aa() {
+function aa2() {
     return function () {
         console.log(222)
     }

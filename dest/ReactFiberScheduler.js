@@ -60,7 +60,7 @@ if (__DEV__) {
 
   warnAboutUpdateOnUnmounted = function (fiber) {
     try {
-      console.group("null")
+      console.group("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 174, end: 190")
       // We show the whole stack but dedupe on the top component's name because
       // the problematic code almost always lies inside that component.
       const componentName = getComponentName(fiber.type) || 'ReactClass';
@@ -72,13 +72,13 @@ if (__DEV__) {
       warningWithoutStack(false, "Can't call setState (or forceUpdate) on an unmounted component. This " + 'is a no-op, but it indicates a memory leak in your application. To ' + 'fix, cancel all subscriptions and asynchronous tasks in the ' + 'componentWillUnmount method.%s', ReactCurrentFiber.getStackByFiberInDevAndProd(fiber));
       didWarnStateUpdateForUnmountedComponent[componentName] = true;
     } finally {
-      console.groupEnd("null");
+      console.groupEnd("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 174, end: 190");
     }
   };
 
   warnAboutInvalidUpdates = function (instance) {
     try {
-      console.group("null")
+      console.group("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 192, end: 216")
 
       switch (ReactCurrentFiber.phase) {
         case 'getChildContext':
@@ -100,7 +100,7 @@ if (__DEV__) {
           break;
       }
     } finally {
-      console.groupEnd("null");
+      console.groupEnd("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 192, end: 216");
     }
   };
 } // Used to ensure computeUniqueAsyncExpiration is monotonically increasing.
@@ -141,7 +141,7 @@ if (__DEV__ && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
 
   replayUnitOfWork = (failedUnitOfWork, thrownValue, isYieldy) => {
     try {
-      console.group("null")
+      console.group("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 260, end: 345")
 
       if (thrownValue !== null && typeof thrownValue === 'object' && typeof thrownValue.then === 'function') {
         // Don't replay promises. Treat everything else like an error.
@@ -227,16 +227,16 @@ if (__DEV__ && replayFailedUnitOfWorkWithInvokeGuardedCallback) {
         nextUnitOfWork = failedUnitOfWork;
       }
     } finally {
-      console.groupEnd("null");
+      console.groupEnd("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 260, end: 345");
     }
   };
 
   rethrowOriginalError = () => {
     try {
-      console.group("null")
+      console.group("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 346, end: 348")
       throw originalReplayError;
     } finally {
-      console.groupEnd("null");
+      console.groupEnd("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 346, end: 348");
     }
   };
 }
@@ -483,14 +483,14 @@ function commitRoot(root, finishedWork) {
 
       root.pendingInteractionMap.forEach((scheduledInteractions, scheduledExpirationTime) => {
         try {
-          console.group("null")
+          console.group("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 573, end: 578")
 
           if (scheduledExpirationTime <= committedExpirationTime) {
             committedInteractions.push(...Array.from(scheduledInteractions));
             root.pendingInteractionMap.delete(scheduledExpirationTime);
           }
         } finally {
-          console.groupEnd("null");
+          console.groupEnd("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 573, end: 578");
         }
       });
     } // Reset this to null before calling lifecycles
@@ -687,7 +687,7 @@ function commitRoot(root, finishedWork) {
           // We need to notify the subscribers that it's finished.
           committedInteractions.forEach(interaction => {
             try {
-              console.group("null")
+              console.group("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 784, end: 798")
               interaction.__count--;
 
               if (subscriber !== null && interaction.__count === 0) {
@@ -703,7 +703,7 @@ function commitRoot(root, finishedWork) {
                 }
               }
             } finally {
-              console.groupEnd("null");
+              console.groupEnd("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 784, end: 798");
             }
           });
         }
@@ -1099,20 +1099,20 @@ function renderRoot(root, isYieldy, isExpired) {
         const interactions = new Set();
         root.pendingInteractionMap.forEach((scheduledInteractions, scheduledExpirationTime) => {
           try {
-            console.group("null")
+            console.group("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 1195, end: 1201")
 
             if (scheduledExpirationTime <= expirationTime) {
               scheduledInteractions.forEach(interaction => {
                 try {
-                  console.group("null")
+                  console.group("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 1197, end: 1198")
                   return interactions.add(interaction);
                 } finally {
-                  console.groupEnd("null");
+                  console.groupEnd("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 1197, end: 1198");
                 }
               });
             }
           } finally {
-            console.groupEnd("null");
+            console.groupEnd("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 1195, end: 1201");
           }
         }); // Store the current set of interactions on the FiberRoot for a few reasons:
         // We can re-use it in hot functions like renderRoot() without having to recalculate it.
@@ -1579,7 +1579,7 @@ function storeInteractionsForExpirationTime(root, expirationTime, updateInteract
       if (pendingInteractions != null) {
         interactions.forEach(interaction => {
           try {
-            console.group("null")
+            console.group("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 1682, end: 1689")
 
             if (updateInteractionCounts && !pendingInteractions.has(interaction)) {
               // Update the pending async work count for previously unscheduled interaction.
@@ -1588,7 +1588,7 @@ function storeInteractionsForExpirationTime(root, expirationTime, updateInteract
 
             pendingInteractions.add(interaction);
           } finally {
-            console.groupEnd("null");
+            console.groupEnd("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 1682, end: 1689");
           }
         });
       } else {
@@ -1597,10 +1597,10 @@ function storeInteractionsForExpirationTime(root, expirationTime, updateInteract
         if (updateInteractionCounts) {
           interactions.forEach(interaction => {
             try {
-              console.group("null")
+              console.group("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 1695, end: 1697")
               interaction.__count++;
             } finally {
-              console.groupEnd("null");
+              console.groupEnd("/Users/jackielin/tencent/babel-plugin-wrapper-debug-method/test/ReactFiberScheduler.js: start: 1695, end: 1697");
             }
           });
         }
